@@ -1,85 +1,145 @@
-# Socket.IO Realtime Chat App
+# Lumino: AI-Powered Collaboration Platform
+Lumino is a real-time collaboration system that goes beyond basic chat. It integrates messaging, file sharing, task management, and AI-powered meeting insights into one unified application. Built with React, Node.js/Express, Socket.IO, and modern databases, it delivers a scalable and production-ready collaboration experience.
 
-This project is a real-time chat application built using Socket.IO and Express. The client side is developed with React and is located in the `client` directory.
 
 
-## Getting Started
+## Table of Contents
+1.  [Features](#features)
+2.  [Tech Stack](#tech-stack)
+3.  [Project Structure](#project-structure)
+4.  [Getting Started](#getting-started)
+*   [Prerequisites](#prerequisites)
+*   [Installation](#installation)
+*   [Running the Application](#running-the-application)
+5.  [Testing the Application](#testing-the-application)
+6.  [Future Enhancements](#future-enhancements)
+7.  [Author](#author)
 
-Follow these instructions to get the project up and running on your local machine.
+
+
+## 🚀 Features
+*   **Real-Time Messaging:** Bi-directional chat powered by Socket.IO with room-based conversations.
+*   **Task Management:** Create, assign, and track tasks directly within chat rooms.
+*   **File Sharing:** Upload and share documents, images, and resources seamlessly.
+*   **AI Summarization:** Leverages OpenAI/Gemini APIs to capture meeting highlights and generate actionable insights.
+*   **User Authentication:** Secure login and session management.
+*   **Scalable Architecture:** Modular frontend (React) and backend (Node.js/Express) with support for PostgreSQL/MongoDB.
+
+
+
+## 🛠️ Tech Stack
+*   **Frontend:** React, Context API, Tailwind CSS
+*   **Backend:** Node.js, Express, Socket.IO
+*   **Database:** PostgreSQL & MongoDB (hybrid usage for structured/unstructured data)
+*   **AI Integration:** OpenAI / Gemini API for intelligent summarization
+*   **Other Tools:** Docker, JWT Authentication, Concurrently
+
+
+
+## 📂 Project Structure
+```
+Lumino/
+├── server.js         # Main backend server with Express & Socket.IO
+├── /client           # React frontend
+│   ├── /src
+│   │   ├── components  # UI Components (Chat, Tasks, Files)
+│   │   ├── context     # State Management
+│   │   ├── pages       # Views (Login, Dashboard, Collaboration Room)
+│   │   └── utils       # Helpers (API calls, formatters)
+├── /models           # Database Schemas (User, Task, File, Message)
+├── /routes           # REST API Routes
+├── /services         # AI Summarization & File Handling
+└── package.json
+```
+
+
+
+## ⚡ Getting Started
+This section guides you through setting up and running the Lumino collaboration platform on your local machine.
+
+
 
 ### Prerequisites
+Ensure you have the following installed:
 
-Make sure you have the following installed on your machine:
+*   Node.js (v14+ recommended)
+*   npm / yarn
+*   Git
+*   PostgreSQL + MongoDB
 
-- Node.js (v14.x or later)
-- npm (comes with Node.js)
-- Git
+
 
 ### Installation
+1.  **Clone the repository:**
 
-1. **Clone the repository**
-
-   Clone this repository to your local machine using the following command:
+Clone the repository to your local machine using the following commands:
 
 ```bash
-  git clone https://github.com/arorakrishh/realtime-chat-app.git
-  cd realtime-chat-app
-   ```
+git clone https://github.com/arorakrishh/realtime-chat-app.git
+cd realtime-chat-app
+```
 
-2. **Install dependencies**
+2.  **Install dependencies:**
 
-   Install the dependencies for both the server and client:
+Install server dependencies:
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
-   Then navigate to the `client` directory and install the client-side dependencies:
+Install client dependencies:
 
-   ```bash
-   cd client
-   npm install
-   cd ..
-   ```
+```bash
+cd client
+npm install
+cd ..
+```
+
+
 
 ### Running the Application
+You can run the application using the following npm scripts:
 
-There are several scripts defined in the `package.json` file to help you run the application:
+*   **Run server only:**
 
-- **Start the server only:**
+```bash
+npm run server
+```
 
-  ```bash
-  npm run server
-  ```
+This command starts the backend server using `nodemon`, which automatically restarts the server upon detecting code changes.
 
-  This will start the server using `nodemon`, which automatically restarts the server whenever you make changes.
+*   **Run client only:**
 
-- **Start the client only:**
+```bash
+npm run client
+```
 
-  ```bash
-  npm run client
-  ```
+This command starts the React frontend application.
 
-  This will start the React client application.
+*   **Run both concurrently:**
 
-- **Run both the server and client concurrently:**
+```bash
+npm run dev
+```
 
-  ```bash
-  npm run dev
-  ```
+This command starts both the backend server and the React frontend application simultaneously using `concurrently`.
 
-  This will start both the server and the client at the same time using `concurrently`.
+
 
 ## Testing the Application
+To test the application with multiple users, open the application in different browsers or use incognito mode. Then, join the same chat room and verify that messages are sent and received in real-time between the different users.
 
-- To test the application, you can open the application in different browsers or in incognito mode to simulate multiple users. You can then join the same chat room and verify that messages are sent and received in real-time between different users.
 
-### Project Structure
 
-- **server.js**: Main server file for the backend using Express and Socket.IO.
-- **client/**: Contains the React frontend for the chat application.
+## 🔮 Future Enhancements
+*   Video/Audio conferencing integration
+*   Role-based access control
+*   Advanced analytics dashboard for collaboration patterns
+*   Mobile-friendly UI
 
-### Author
 
+
+## 👨‍💻 Author
 Krish Arora
 
+*   LinkedIn: [Krish Arora](https://www.linkedin.com/in/krish-arora-)
